@@ -1,0 +1,88 @@
+:root {
+  --bg-color: #202028;
+  --text-color: #ffffff;
+  --primary-color: #d32f2f; /* Red */
+  --secondary-color: #388e3c; /* Green */
+  --accent-color: #fbc02d; /* Yellow */
+  --pixel-font: 'Press Start 2P', cursive;
+  
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--pixel-font);
+  -webkit-font-smoothing: none;
+  line-height: 1.5;
+}
+
+button {
+  font-family: var(--pixel-font);
+  cursor: pointer;
+  border: 4px solid #fff;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  position: relative;
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.5);
+  transition: transform 0.1s;
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.5);
+}
+
+input {
+  font-family: var(--pixel-font);
+  padding: 10px;
+  border: 4px solid #fff;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+}
+
+.pixel-container {
+  border: 4px solid #fff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background: #2a2a35;
+  box-shadow: 8px 8px 0px 0px rgba(0,0,0,0.5);
+}
+
+/* CRT Scanline Effect (Optional but cool) */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.2)
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.15;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  text-shadow: 4px 4px 0 #000;
+}
